@@ -1,5 +1,13 @@
 {
     "Header":{
         "title":"By the students, For the students!"
+    },
+    "LandingData":{
+            "banner1":"This is banner1 title",
+            "caption1":"This is banner1 caption",
+            "banner2":"This is banner2 title",
+            "caption2":"This is banner2 caption",
+            "banner3":"This is banner2 title",
+            "caption3":"This is banner2 caption"
     }
 }

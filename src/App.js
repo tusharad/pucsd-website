@@ -1,23 +1,21 @@
-import logo from "./logo.svg";
 import "./App.css";
-import Button from "@mui/material/Button";
+import Button from "react-bootstrap/Button";
 import Header from "./Components/Header";
 import Landing from "./Components/Landing";
-import JsonData from "./Data/data.json";
+import data from "./Data/data.json";
 import { useState, useEffect } from "react";
-
 function App() {
   const [landingPageData, setLandingPageData] = useState({});
   useEffect(() => {
-    setLandingPageData(JsonData);
+    setLandingPageData(data);
   }, []);
 
   return (
     <div className="App">
-      <Header data={landingPageData.Header} />
-      <Landing />
-      <h1>Hello WOrld!</h1>
-      <Button variant="contained">Hello World</Button>
+      <Header />
+      <Landing data={landingPageData.LandingData} />
+      <h1>PUCSD</h1>
+      <Button>Click me!</Button>
     </div>
   );
 }
