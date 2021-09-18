@@ -5,7 +5,7 @@ import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
 import Link from "@mui/material/Link";
 import Box from "@mui/material/Box";
-import dept from "./Images/dept.jpg";
+import dept from "../Images/dept.jpg";
 
 function MainFeaturedPost(props) {
   const { post } = props;

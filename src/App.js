@@ -6,27 +6,24 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import Header from "./Header";
-import MainFeaturedPost from "./MainFeaturedPost";
-import FeaturedPost from "./FeaturedPost";
-import Main from "./Main";
-import Sidebar from "./Sidebar";
-import Footer from "./Footer";
-import post1 from "./blog-post.1.md";
-import post2 from "./blog-post.2.md";
-import post3 from "./blog-post.3.md";
+import Header from "./Components/Header";
+import MainFeaturedPost from "./Components/MainFeaturedPost";
+import FeaturedPost from "./Components/FeaturedPost";
+import Main from "./Components/Main";
+import Sidebar from "./Components/Sidebar";
+import Footer from "./Components/Footer";
 import dept from "./Images/dept.jpg";
 const sections = [
-  { title: "Technology", url: "#" },
-  { title: "Design", url: "#" },
-  { title: "Culture", url: "#" },
-  { title: "Business", url: "#" },
-  { title: "Politics", url: "#" },
-  { title: "Opinion", url: "#" },
-  { title: "Science", url: "#" },
-  { title: "Health", url: "#" },
-  { title: "Style", url: "#" },
-  { title: "Travel", url: "#" },
+  { title: "Technology", data: ["hod message", "hello"] },
+  { title: "Design", data: ["hod message", "hello"] },
+  { title: "Culture", data: ["hod message", "hello"] },
+  { title: "Business", data: ["hod message", "hello"] },
+  { title: "Politics", data: ["hod message", "hello"] },
+  { title: "Opinion", data: ["hod message", "hello"] },
+  { title: "Science", data: ["hod message", "hello"] },
+  { title: "Health", data: ["hod message", "hello"] },
+  { title: "Style", data: ["hod message", "hello"] },
+  { title: "Travel", data: ["hod message", "hello"] },
 ];
 
 const mainFeaturedPost = {
@@ -57,7 +54,7 @@ const featuredPosts = [
   },
 ];
 
-const posts = [post1, post2, post3];
+const posts = [];
 
 const sidebar = {
   title: "About",
@@ -99,7 +96,7 @@ export default function App() {
             ))}
           </Grid>
           <Grid container spacing={5} sx={{ mt: 3 }}>
-            <Main title="From the firehose" posts={posts} />
+            <Main title="From the firehose" />
             <Sidebar
               title={sidebar.title}
               description={sidebar.description}
