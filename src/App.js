@@ -12,18 +12,46 @@ import FeaturedPost from "./Components/FeaturedPost";
 import Main from "./Components/Main";
 import Sidebar from "./Components/Sidebar";
 import Footer from "./Components/Footer";
-import dept from "./Images/dept.jpg";
+
 const sections = [
-  { title: "Technology", data: ["hod message", "hello"] },
-  { title: "Design", data: ["hod message", "hello"] },
-  { title: "Culture", data: ["hod message", "hello"] },
-  { title: "Business", data: ["hod message", "hello"] },
-  { title: "Politics", data: ["hod message", "hello"] },
-  { title: "Opinion", data: ["hod message", "hello"] },
-  { title: "Science", data: ["hod message", "hello"] },
-  { title: "Health", data: ["hod message", "hello"] },
-  { title: "Style", data: ["hod message", "hello"] },
-  { title: "Travel", data: ["hod message", "hello"] },
+  {
+    title: "About",
+    data: ["History, Mission", "HOD's message", "Reaching PUCSD", "Pune City"],
+    url: "#",
+  },
+  {
+    title: "Academics",
+    data: [
+      "Syllabi",
+      "Programmes",
+      "Academic Calender For Affiliated colleges",
+    ],
+    url: "#",
+  },
+  { title: "Facilities", data: ["UoP Central Library"], url: "#" },
+  {
+    title: "Cells",
+    data: [
+      "Anti-Ragging Cell",
+      "Alumni Cell",
+      "Placement Cell",
+      "SysAds",
+      "Facilitation Group",
+    ],
+    url: "#",
+  },
+  { title: "Students", data: ["Placements", "Student Webpages"], url: "#" },
+  { title: "Admissions", data: [], url: "#" },
+  {
+    title: "Contact us",
+    data: [
+      "Admission/Entrance",
+      "Administration",
+      "Teaching Staff/Faculty",
+      "Department phone numbers ",
+    ],
+    url: "#",
+  },
 ];
 
 const mainFeaturedPost = {
@@ -53,8 +81,6 @@ const featuredPosts = [
     imageLabel: "Image Text",
   },
 ];
-
-const posts = [];
 
 const sidebar = {
   title: "About",

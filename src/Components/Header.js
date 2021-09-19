@@ -4,16 +4,19 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
-import MenuItem from "@mui/material/MenuItem";
 import pucsd_logo from "../Images/pucsd_logo.jpg";
+import MenuItems from "./MenuItems";
+import Box from "@mui/material/Box";
 
 function Header(props) {
-  const { sections, title } = props;
+  const { sections } = props;
 
   const [anchorEl, setAnchorEl] = React.useState(null);
+  const [items, setItems] = React.useState([]);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
+    setItems(event.currentTarget.value);
   };
   const handleClose = () => {
     setAnchorEl(null);
@@ -30,7 +33,7 @@ function Header(props) {
           noWrap
           sx={{ flex: 1 }}
         >
-          <img src={pucsd_logo} />
+          <img src={pucsd_logo} alt="" />
         </Typography>
       </Toolbar>
       <Toolbar
@@ -38,14 +41,15 @@ function Header(props) {
         variant="dense"
         sx={{ justifyContent: "space-between", overflowX: "auto" }}
       >
-        {sections.map((section) => (
-          <>
+        {sections.map((section, key) => (
+          <Box key={section.title}>
             <Button
               id="demo-positioned-button"
               aria-controls="demo-positioned-menu"
               aria-haspopup="true"
               aria-expanded={open ? "true" : undefined}
               onClick={handleClick}
+              value={section.data}
               color="inherit"
               variant="body2"
               sx={{ p: 1, flexShrink: 0 }}
@@ -67,13 +71,9 @@ function Header(props) {
                 horizontal: "left",
               }}
             >
-              {section.data.map((data) => (
-                <>
-                  <MenuItem onClick={handleClose}>{data}</MenuItem>
-                </>
-              ))}
+              <MenuItems data={items} />
             </Menu>
-          </>
+          </Box>
         ))}
       </Toolbar>
     </React.Fragment>

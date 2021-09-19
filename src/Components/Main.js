@@ -6,8 +6,6 @@ import Divider from "@mui/material/Divider";
 import data from "./data.json";
 
 function Main(props) {
-  const { posts, title } = props;
-
   return (
     <Grid
       item
