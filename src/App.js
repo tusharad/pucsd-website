@@ -11,6 +11,7 @@ import MainFeaturedPost from "./Components/MainFeaturedPost";
 import Main from "./Components/Main";
 import Sidebar from "./Components/Sidebar";
 import Footer from "./Components/Footer";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 const sections = [
   {
@@ -89,9 +90,34 @@ export default function App() {
       <Container maxWidth="lg">
         <Header title="PUCSD" sections={sections} />
         <main>
-          <MainFeaturedPost post={mainFeaturedPost} />
           <Grid container spacing={5} sx={{ mt: 3 }}>
-            <Main title="From the firehose" />
+            <Router>
+              <Switch>
+                <Route
+                  exact
+                  path="/"
+                  component={() => (
+                    <>
+                      <MainFeaturedPost post={mainFeaturedPost} />
+                      <Main title="From the firehose" />
+                    </>
+                  )}
+                />
+
+                <Route
+                  exact
+                  path="/about"
+                  component={() => (
+                    <Sidebar
+                      title={sidebar.title}
+                      description={sidebar.description}
+                      archives={sidebar.archives}
+                      social={sidebar.social}
+                    />
+                  )}
+                />
+              </Switch>
+            </Router>
             <Sidebar
               title={sidebar.title}
               description={sidebar.description}

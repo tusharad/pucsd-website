@@ -1,13 +1,13 @@
-import Divider from "@mui/material/Divider";
+import MenuItem from "@mui/material/MenuItem";
+import { Link } from "react-router-dom";
+
 const MenuItems = ({ data }) => {
-  const items = data.split(",");
   return (
     <>
-      {items.map((item, key) => (
-        <>
-          <p key={item}>{item}</p>
-          <Divider />
-        </>
+      {data.map((item, key) => (
+        <MenuItem key={item}>
+          <Link to="/">{item}</Link>
+        </MenuItem>
       ))}
     </>
   );
