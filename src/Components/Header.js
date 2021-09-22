@@ -2,26 +2,11 @@ import * as React from "react";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
-import Menu from "@mui/material/Menu";
 import pucsd_logo from "../Images/pucsd_logo.jpg";
-import MenuItems from "./MenuItems";
+import { Link } from "react-router-dom";
 
 function Header(props) {
   const { sections } = props;
-
-  const [anchorEl, setAnchorEl] = React.useState(null);
-  const [items, setItems] = React.useState([]);
-  const open = Boolean(anchorEl);
-
-  const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
-    const items = event.currentTarget.value.split(",");
-    setItems(items);
-  };
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
-
   return (
     <React.Fragment>
       <Toolbar sx={{ borderBottom: 1, borderColor: "divider" }}>
@@ -44,12 +29,9 @@ function Header(props) {
       >
         {sections.map((section, key) => (
           <div key={section.title}>
-            <Button onClick={handleClick} value={section.data}>
-              {section.title}
-            </Button>
-            <Menu anchorEl={anchorEl} open={open} onClose={handleClose}>
-              <MenuItems data={items} />
-            </Menu>
+            <Link to={section.url}>
+              <Button>{section.title}</Button>
+            </Link>
           </div>
         ))}
       </Toolbar>

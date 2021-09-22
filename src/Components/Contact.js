@@ -1,9 +1,8 @@
 import * as React from "react";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
-import Divider from "@mui/material/Divider";
 
-function Main({ data }) {
+function Contact({ data }) {
   return (
     <Grid
       item
@@ -18,10 +17,17 @@ function Main({ data }) {
       <Typography variant="h6" gutterBottom>
         {data.title}
       </Typography>
-      <Divider />
       <h6>{data.post}</h6>
+      <Typography variant="h6" gutterBottom>
+        {data.title2}
+      </Typography>
+      <h6>{data.post2}</h6>
+      <Typography variant="h6" gutterBottom>
+        {data.title3}
+      </Typography>
+      <h6>{data.post3}</h6>
     </Grid>
   );
 }
 
-export default Main;
+export default Contact;

@@ -10,12 +10,6 @@ function Sidebar(props) {
 
   return (
     <Grid item xs={12} md={4}>
-      <Paper elevation={0} sx={{ p: 2, bgcolor: "grey.200" }}>
-        <Typography variant="h6" gutterBottom>
-          {title}
-        </Typography>
-        <Typography>{description}</Typography>
-      </Paper>
       <Typography variant="h6" gutterBottom sx={{ mt: 3 }}>
         Notifications
       </Typography>
@@ -29,6 +23,12 @@ function Sidebar(props) {
           {archive.title}
         </Link>
       ))}
+      <Paper elevation={0} sx={{ p: 2, bgcolor: "grey.200" }}>
+        <Typography variant="h6" gutterBottom>
+          {title}
+        </Typography>
+        <Typography>{description}</Typography>
+      </Paper>
 
       <Typography variant="h6" gutterBottom sx={{ mt: 3 }}>
         Social
