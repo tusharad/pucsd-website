@@ -14,7 +14,7 @@ const Faculty = () => {
 
    return(
 <>
-<Container maxW={'7xl'} p="12" >
+<Container id="Faculty" maxW={'7xl'} p="12" >
 <h1>Faculty</h1>
 <TableContainer>
   <Table variant='striped' colorScheme='teal'>

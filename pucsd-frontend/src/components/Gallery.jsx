@@ -40,7 +40,7 @@ export default function Carousel() {
   ];
 
   return (
-    <Container maxW={'7xl'} p="12" >
+    <Container id="Gallery" maxW={'7xl'} p="12" >
     <Box
       position={'relative'}
       height={'600px'}

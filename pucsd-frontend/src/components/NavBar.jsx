@@ -10,7 +10,7 @@ import {
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 
-const Links = ['About', 'Academics', 'Faculty','Placement Cell','Alumini Cell','Gallery'];
+const Links = ['About', 'Academics', 'Faculty','Placement_Cell','Alumini_Cell','Gallery'];
 
 const NavLink = ({ children }) => (
   <Link

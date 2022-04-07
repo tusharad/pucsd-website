@@ -17,7 +17,7 @@ import {
 
 const Academics = () => {
   return (
-    <Container maxW={'7xl'} p="12" >
+    <Container id="Academics" maxW={'7xl'} p="12" >
       <Divider />
       <VStack paddingTop="40px" spacing="2" alignItems="flex-start">
         <Heading id="About" as="h2">Degree Programmes</Heading>
