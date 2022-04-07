@@ -54,11 +54,21 @@ export default function Footer() {
         <Text>Project by 
           <Link _hover={{
          bg: useColorModeValue('gray.200', 'gray.700'),
-        }} href="/">Prasad Bhalerao</Link>
+        }} href="https://github.com/prasad89" target="_blank"> Prasad Bhalerao </Link>
          & 
-         <a href="/">Tushar Adhatrao</a>
+         <Link _hover={{
+         bg: useColorModeValue('gray.200', 'gray.700'),
+        }} href="https://github.com/tusharad" target="_blank"> Tushar Adhatrao</Link>
          
          </Text>
+
+         <Text>
+           Github Repo:  
+          <Link _hover={{
+         bg: useColorModeValue('gray.200', 'gray.700'),
+        }} href="https://github.com/tusharad/pucsd-website" target="_blank"> here</Link>         
+         </Text>
+
         <Stack direction={'row'} spacing={6}>
           <SocialButton label={'Twitter'} href={'#'}>
             <FaTwitter />
